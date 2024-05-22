@@ -53,14 +53,12 @@ CONTROL DE LEDS POR UART
 
 El sistema permite controlar el estado de cuatro LEDs mediante comandos enviados por UART. Los comandos deben tener el siguiente formato.
 
-typedef enum commandsEnum {
+ typedef enum commandsEnum {
 	COMMAND_LED1_TOGGLE = 'a',
 	COMMAND_LED2_TOGGLE = 's',
 	COMMAND_LED3_TOGGLE = 'd',
 	COMMAND_LED4_TOGGLE = 'f'
-} commands_LED_t;
-
-
+ } commands_LED_t;
 
 ANÁLISIS DE RESULTADOS 
 
