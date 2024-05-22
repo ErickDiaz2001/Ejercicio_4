@@ -89,4 +89,5 @@ CONCLUSIÓN
 
 El sistema de control descrito en este informe utiliza máquinas de estados con debounce para dos teclas de manera efectiva.
 Esto permite detectar de manera precisa la presión y liberación de las teclas, incluso en presencia de rebote.
-El sistema también envía información sobre el estado de las teclas a través de la UART ...
+El sistema también envía información sobre el estado de las teclas a través de la UART.
+Ademas permite controlar el estado de cuatro LEDs mediante comandos enviados por UART de manera simple y eficiente a través de interrupciones de la UART.
