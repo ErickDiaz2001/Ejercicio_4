@@ -59,7 +59,27 @@ El sistema permite controlar el estado de cuatro LEDs mediante comandos enviados
 	        COMMAND_LED3_TOGGLE = 'd',
 	        COMMAND_LED4_TOGGLE = 'f'
         } commands_LED_t;
+	
+Según el dato recibido se encenderá el correspondiente led.
+ 
+	  switch (dato)
+	  {
+	  case COMMAND_LED1_TOGGLE:
+		  HAL_GPIO_TogglePin(GPIOC, LED_1_Pin);
+		  break;
 
+	  case COMMAND_LED2_TOGGLE:
+		  HAL_GPIO_TogglePin(GPIOA, LED_2_Pin);
+		  break;
+
+	  case COMMAND_LED3_TOGGLE:
+		  HAL_GPIO_TogglePin(GPIOA, LED_3_Pin);
+		  break;
+
+	  case COMMAND_LED4_TOGGLE:
+		  HAL_GPIO_TogglePin(GPIOA, LED_4_Pin);
+		  break;
+	  }
 
 ANÁLISIS DE RESULTADOS 
 
