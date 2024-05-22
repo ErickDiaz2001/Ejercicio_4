@@ -51,10 +51,8 @@ y el nuevo estado de la tecla (presionada o liberada).
 
 CONTROL DE LEDS POR UART
 
-El sistema permite controlar el estado de cuatro LEDs mediante comandos enviados por UART. Los comandos deben tener el siguiente formato:
+El sistema permite controlar el estado de cuatro LEDs mediante comandos enviados por UART. Los comandos deben tener el siguiente formato.
 
-
-/* USER CODE BEGIN PTD */
 typedef enum commandsEnum {
 	COMMAND_LED1_TOGGLE = 'a',
 	COMMAND_LED2_TOGGLE = 's',
@@ -62,50 +60,6 @@ typedef enum commandsEnum {
 	COMMAND_LED4_TOGGLE = 'f'
 } commands_LED_t;
 
-typedef enum BUTTON_STATE {
-	TECLA_INACTIVA,
-	TECLA_PRESIONADA,
-	TECLA_LIBERADA
-} button_state_t;
-
-/* USER CODE END PTD */
-
-void debounce(uint8_t pin_tecla, uint8_t i)
-{
-	switch (estado_boton[i])
-	{
-	case TECLA_INACTIVA:
-		valor_swich[i]= HAL_GPIO_ReadPin(GPIOA, pin_tecla);//se lee el estado del boton
-		if (valor_swich[i] == 1)
-		{
-			valor_swich_anterior[i] = valor_swich[i];
-			estado_boton[i] = TECLA_PRESIONADA;
-		}
-		break;
-	case TECLA_PRESIONADA:
-		valor_swich[i] = HAL_GPIO_ReadPin(GPIOA, pin_tecla);//se lee el estado del boton
-		if (valor_swich[i] == valor_swich_anterior[i]|| contador[i] > TIEMPO_DEBOUNCE)//comparamos valor anterior con el valor actual
-		{
-			printf("Tecla apretada: TEC%d\n\r", i);
-			valor_swich_anterior[i] = 0;
-			estado_boton[i] = TECLA_LIBERADA;
-		}
-		else
-		{
-			estado_boton[i] = TECLA_INACTIVA;
-		}
-		contador[i] = contador[i] + 1;
-		break;
-	case TECLA_LIBERADA:
-		valor_swich[i] = HAL_GPIO_ReadPin(GPIOA, pin_tecla);//se lee el estado del boton
-		if (valor_swich[i] == 0)
-		{
-			printf("Tecla liberada: TEC%d\n\r", i);
-			estado_boton[i] = TECLA_INACTIVA;
-		}
-		break;
-	}
-}
 
 
 ANÁLISIS DE RESULTADOS 
