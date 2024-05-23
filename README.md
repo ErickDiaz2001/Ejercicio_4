@@ -7,7 +7,7 @@ CONFIGURACION
 
 El system clock del microcontrolador se configuro a 72Mhz.
 
-Se utilizara el timer 2, para obtener una interrupción cada 1 milisegundo se configuro un prescaler a 7200-1 y el counter period a 10. Ademas de habilitar la interrupcion. 
+Se utilizara el timer 2, para obtener una interrupción cada 1 milisegundo se configuro un prescaler a 7200-1 y el counter period a 10, Ademas de habilitar la interrupcion. 
 Para la comunicaion se utilizo el usart_3, se habilito la interrupcion para la resepcion de datos.
 
 ![image](https://github.com/ErickDiaz2001/Ejercicio_4/assets/169405943/39c48379-5868-47ba-944b-89a8024f9a9f)
