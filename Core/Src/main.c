@@ -171,7 +171,7 @@ int main(void)
 	  switch (dato)
 	  {
 	  case COMMAND_LED1_TOGGLE:
-		  HAL_GPIO_TogglePin(GPIOC, LED_1_Pin);
+		  HAL_GPIO_TogglePin(GPIOA, LED_1_Pin);
 		  break;
 
 	  case COMMAND_LED2_TOGGLE:
@@ -237,7 +237,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	if(huart->Instance == USART3)
 	{
-		HAL_UART_Receive_IT(&huart3, &dato, 1);//recivimos el dato y lo guardamos en la variable dato
+		HAL_UART_Receive_IT(&huart3, &dato, 1);//recivimos el dato y lo guardamos
 	}
 }
 
