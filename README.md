@@ -84,6 +84,11 @@ Según el dato recibido se encenderá el correspondiente led.
 
 ANÁLISIS DE RESULTADOS 
 
+Encendido de leds mediante comandos:
+
+![Captura de pantalla 2024-05-28 220522](https://github.com/ErickDiaz2001/Ejercicio_4/assets/169405943/f3fc2601-4055-4e95-95c5-d93bc847df92)
+
+
 [https://youtu.be/qOz8OEzn5N8](https://youtu.be/fBQcgaGiWes)
 
 CONCLUSIÓN
