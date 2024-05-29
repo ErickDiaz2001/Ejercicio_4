@@ -86,7 +86,8 @@ ANÁLISIS DE RESULTADOS
 
 Impresion del estado de la tecla:
 
-![image](https://github.com/ErickDiaz2001/Ejercicio_4/assets/169405943/c415585e-70d3-4869-aacc-3fe6852ee315)
+![image](https://github.com/ErickDiaz2001/Ejercicio_4/assets/169405943/0f3ccbb6-51a9-4355-b7ec-36770725ded0)
+
 
 
 https://youtu.be/x9c5bC4n7YA
